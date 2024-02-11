@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    --border-radius: 10px;
+    --border-card: linear-gradient(0deg, rgba(255,255,255,0.3) 0%, 
+    rgba(255,255,255,0.6) 100%);
+
+    --blur: blue(100px);
+    --primary-color: #ff8911;
+    --card-border: 2px solid rgba(255,255,255,1);
+}
+
+nav {
+    position: fixed;
+    top: 4%;
+    width: 90%;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    border: var(--card-border);
+    background-color: var(--border-card);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transform: translateX(5%);
+    filter: var(--blur);
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav h3 {
+    font-size: 20px;
+    letter-spacing: .3px;
+}
+
+nav h3 span,
+.content span {
+    color: var(--primary-color);
+}
+
+nav ul li a {
+    font-size: 14px;
+    position: relative;
+    color: #000;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #ff8911;
+    border-radius: 5px;
+    width: 0;
+    height: 3px;
+    transition: .4s ease;
+    opacity: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+    opacity: 1;
+}
+
+button {
+    background: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    padding: 10px 40px;
+
+    font-weight: 600;
+    font-size: 13px;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+
+button:hover {
+    background: black;
+    color: #fff;
+}
+
+nav #menu {
+    display: none;
+}
+
+/* Main Header */
+
+.main-header {
+    min-height: 100vh;
+    background-image: url(Images/header.bg.webp);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.content {
+    margin-top: 3%;
+    padding: 0 10%;
+}
+
+.content .line {
+    line-height: 4.8rem;
+    margin-block: 32px;
+}
+
+.content h4 {
+    font-size: 19px;
+}
+
+.content h2 {
+    font-size: 55px;
+}
+
+.content p {
+    font-size: 18px;
+    font-weight: 400;
+    width: 55%;
+    line-height: 2rem;
+}
+
+.content button {
+    margin-top: 35px;
+}
+
+/* Blog Section  */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.root {
+    padding: 4% 3%;
+    width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.root .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 3% 4%;
+
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.1);
+    transition: .5s ease;
+}
+
+.root .content:hover {
+    outline: 2px solid var(--primary-color);
+}
+
+.root .content p {
+    width: 110%;
+    font-size: 16px;
+}
+
+.root .content h4 {
+    font-size: 19px;
+}
+
+.parent {
+    width: 1400px;
+    padding: 4% 2%;
+}
+
+#categories,
+#burger,
+#dishes,
+#dish {
+    text-align: center;
+    font-size: 60px;
+    color: var(--primary-color);
+    -webkit-text-stroke-color: var(--primary-color);
+    -webkit-text-stroke-width: 2px;
+    color: transparent;
+}
+
+.root-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 150px;
+    overflow-x: auto;
+    margin-block: 50px;
+}
+
+.root-1::-webkit-scrollbar {
+    border: 5px solid rgba(0,0,0,0.5);
+}
+
+.root-1::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+.root-1::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border: 5px solid black;
+}
+
+.root-1 .content-1 img {
+    width: 250px;
+    height: 200px;
+}
+
+.content-1 .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.content-1 .low {
+    line-height: 4rem;
+}
+
+.content-1 {
+    display: flex;
+    max-width: 350px;
+    margin-bottom: 30px;
+}
+
+.content-1 h4 {
+    color: var(--primary-color);
+}
+
+.content-1 h2 {
+    color: var(--primary-color);
+    font-size: 60px;
+}
+
+/*  Dishes Section */
+
+.dishes {
+    width: 1500px;
+    padding: 5% 4.8%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.button-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.food-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 1.5% 2%;
+}
+
+.food-content {
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    border-radius: 10px;
+    border: .8px solid rgb(186, 182, 182);
+    width: 23%;
+}
+
+.food-content .details {
+    padding-left: 4%;
+    padding-bottom: 5%;
+}
+
+.food-content img {
+    max-width: 100%;
+}
+
+.food-content #food_name {
+    font-size: 16px;
+    font-weight: 500;
+    padding-top: 5px;
+}
+
+.food-content #prices {
+    font-size: 16px;
+}
+
+.food-content .stars-line {
+    margin-block: 5px;
+}
+
+/* Top Dishes Section */
+
+.dish_root {
+    width: 1500px;
+    padding: 1% 1%;
+}
+
+.top_dishes {
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    padding: 1% 1%;
+}
+
+.top_dish {
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+    box-shadow: 1px 1px 10px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin: 5% 0;
+    width: 320px;
+    height: 375px;
+    
+}
+
+.top_dish img {
+    background-size: cover;
+    width: 100%;
+}
+
+.dish_content {
+    padding: 2% 3%;
+    padding-bottom: 5%;
+}
+
+.dish_content h5 {
+    font-size: 16px;
+}
+
+.dish_content p {
+    line-height: 1.3rem;
+    font-size: 15px;
+    margin-block: 2% 4%;
+}
+
+/* Footer */
+
+footer {
+    width: 1520px;
+    padding: 10%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+    background: #000;
+}
+
+footer a {
+    color: #fff;
+
+}
+
+footer .links {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    gap: 15px;
+}
+
+footer h5 {
+    font-size: 17px;
+}
+
+footer h4 {
+    font-size: 30px;
+}
+
+footer h4 span {
+    color: var(--primary-color);
+}
+
+footer .top {
+    display: flex;
+    color: #fff;
+}
+
+footer .links-1 a {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+footer a:hover {
+    color: gray;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1500px) {
+
+    #categories {
+        margin: 20% 0 10% 0;
+    }
+
+    .parent,
+    .dishes,
+    .dish_root {
+        padding: 0 7%;
+        width: 100%;
+    }
+
+    .top_dish {
+        max-width: 2800px;
+        max-height: auto;
+    }
+    
+}
+
+@media screen and (max-width: 1000px) {
+
+    .food-content .details{
+        width: max-content;
+    }
+
+    nav button {
+        opacity: 0;
+    }
+
+    nav #menu {
+        display: block;
+    }
+    
+    nav ul {
+        position: absolute;
+        top: 120%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        padding: 15px 0;
+
+        background: rgba(255,255,255,0.1);
+        backdrop-filter: blur(5px);
+        border-radius: 20px;
+        border: 2px solid #fff;
+        opacity: 0;
+        transition: .4s ease-in-out;
+    }
+
+    nav.active ul {
+        opacity: 1;
+    }
+
+    .root {
+        gap: 10px;
+        padding: 3% 5.5%;
+    }
+
+    .root .content h4 {
+        font-size: 17px;
+    }
+
+    .root .content p {
+        font-size: 15px;
+    }
+
+    .food-content {
+        width: 22%;
+        padding: 1.5% 1.5%;
+    }
+
+    .food-menu {
+        margin-left: 2%;
+    }
+
+    .dishes {
+        padding: 5% 2%;
+    }
+
+    .parent {
+        margin-block: -5% 3%;
+    }
+
+    .root {
+        gap: 20px;
+        justify-content: space-evenly;
+    }
+
+    .root .content {
+        width: 45%;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+
+    .content {
+        margin-top: 12%;
+    }
+
+    .content .line {
+        margin-block: 17px;
+    }
+
+    .content h4 {
+        font-size: 18px;
+    }
+
+    .content h2 {
+        font-size: 45px;
+        line-height: 4.3rem;
+    }
+
+    .content p {
+        font-size: 17px;
+        width: 75%;
+    }
+
+    #categories,
+    #dishes {
+        font-size: 45px;
+    }
+
+    .button-line button {
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    .button-line {
+        margin-right: 20px;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .food-content {
+        padding: 2%;
+        width: 40%;
+    }    
+
+    .food-menu {
+        gap: 25px;
+        margin-left: 10%;
+    }
+
+
+}
+
+@media screen and (max-width: 380px) {
+
+    #dish {
+        font-size: 40px;
+    }
+
+    .dish_root {
+        margin-block: 5%;
+    }
+
+    .top_dish {
+        width: 75%;
+        height: auto;
+    }
+        
+    .top_dish .dish_content {
+        padding: 1.2rem 1.3rem;
+    }
+
+    footer {
+        padding: 10%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer a {
+        font-size: 14px;
+    }
+
+    footer h5 {
+        font-size: 15px;
+    }
+
+
+    .dishes {
+        padding: 0;
+    }
+    
+    .food-menu {
+        padding: 0;
+    }
+
+    .root .content h4 {
+        font-size: 13px;
+    }
+
+    .root .content p {
+        font-size: 12px;
+        line-height: 1.2rem;
+    }
+
+    .main-header .content {
+        margin-top: 20%;
+    }
+
+    .main-header .content h4 {
+        font-size: 17px;
+    }
+
+    .main-header .content p {
+        font-size: 15px;
+        width: 80%;
+    }
+
+    .main-header .content h2 {
+        font-size: 35px;
+        line-height: 3.7rem;
+    }
+
+    .dish_root {
+        margin-top: 15%;
+    }
+
+    .dishes {
+        padding: 0;
+    }
+
+    .food-menu {
+        padding-right: 2%;
+    }
+
+    .food-content {
+        width: 90%;
+    }
+
+}
