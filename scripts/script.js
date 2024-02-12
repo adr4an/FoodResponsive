@@ -11,20 +11,3 @@ export function click(){
     });
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

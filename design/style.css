@@ -50,6 +50,10 @@ nav h3 {
     letter-spacing: .3px;
 }
 
+nav h3 a {
+    color: black;
+}
+
 nav h3 span,
 .content span {
     color: var(--primary-color);
@@ -79,6 +83,31 @@ nav ul li a:hover::after {
     opacity: 1;
 }
 
+.nav-button {
+    display: flex;
+    gap: 20px;
+}
+
+.cart-bag {
+    position: relative;
+    background: black;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    transition: .4s ease
+}
+
+.cart-bag:hover {
+    background: var(--primary-color);
+}
+
+.cart-bag i {
+    font-size: 16px;
+}
+
 button {
     background: var(--primary-color);
     border: none;
@@ -103,9 +132,9 @@ nav #menu {
 
 /* Main Header */
 
-.main-header {
+#main {
     min-height: 100vh;
-    background-image: url(Images/header.bg.webp);
+    background-image: url(Images);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -309,6 +338,10 @@ nav #menu {
     font-size: 16px;
 }
 
+.food-content button {
+    margin-top: 10px;
+}
+
 .food-content .stars-line {
     margin-block: 5px;
 }
@@ -443,6 +476,13 @@ footer a:hover {
         opacity: 0;
     }
 
+    nav .nav-button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-shrink: 1;
+    }
+
     nav #menu {
         display: block;
     }
@@ -564,10 +604,35 @@ footer a:hover {
 
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 400px) {
 
-    #dish {
-        font-size: 40px;
+    .cart-bag {
+       padding: 8px 15px;
+       font-size: 14px;
+    }
+
+    .cart-bag i {
+        font-size: 13px;
+    }
+    
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        box-shadow: 1px 2px 5px 5px rgba(0,0,0,0.2);
+        width: 90%;
+        padding:  0 4%;
+    }
+
+    nav h3 a {
+       font-size: 18px;
+       display: flex;
+       margin-left: 10%;
+    }
+
+    .nav-button {
+        margin-left: -25%;
     }
 
     .dish_root {

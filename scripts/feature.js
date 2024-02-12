@@ -17,7 +17,7 @@ const blog = [
     text: 'Food is The Most ALluring'
 }];
 
-export function blogs(){
+export function feature(){
 
     let html = '';
     const root = document.querySelector('.root');
@@ -39,4 +39,4 @@ export function blogs(){
 
 }
 
-blogs();
+feature();

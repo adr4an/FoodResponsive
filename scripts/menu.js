@@ -22,8 +22,7 @@ const categories  = [{
 
 const root = document.querySelector('#root');
 
-export function saving(){
-
+export function category(){
 
     let html = '';
 
@@ -49,4 +48,4 @@ export function saving(){
 };
 
 
-saving();
+category();

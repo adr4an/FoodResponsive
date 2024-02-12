@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Webpage </title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="design/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css">
     
@@ -13,22 +13,32 @@
 </head>
 <body>
 
-    <div class="main-header">
+    <div class="main-header" id="main" 
+    style=" background-image: url(Images/header.bg.webp);">
         
         <nav>
         
-                <h3> LOGO <span> .SHOP</span> </h3>
+                <h3> <a href="#"> LOGO <span> .SHOP</span> </a> </h3>
         
                 <ul>
                     <li> <a href="#"> Home </a></li>
-                    <li> <a href="#"> Categories </a></li>
-                    <li> <a href="#"> Menu </a></li>
-                    <li> <a href="#"> Blog </a></li>
-                    <li> <a href="#"> Contact </a></li>
+                    <li> <a href="#categories"> Categories </a></li>
+                    <li> <a href="#choices"> Menu </a></li>
+                    <li> <a href="#blog"> Blog </a></li>
+                    <li> <a href="#footer"> Contact </a></li>
                 </ul>
         
-                <button> Book </button>
-                <i class="fa-solid fa-bars" id="menu"></i>
+                <div class="nav-button">
+                    <button> Book </button>
+                    <a href="cart.html" id="cart-button">
+                        <div class="cart-bag">
+                            <i class="fa-solid fa-heart"></i> 
+                            <span class="cart-quantity"> 0 </span>
+                        </div>
+                    </a>
+
+                    <i class="fa-solid fa-bars" id="menu"></i>
+                </div>
         </nav>
 
         <div class="content">
@@ -52,14 +62,13 @@
 
         <div class="root">
 
-
         </div>
 
     </div>
 
     <!-- Categories Section -->
 
-    <div class="container">
+    <div class="container" id="categories">
 
         <div class="parent">
             <h2 id="categories"> Categories </h2>
@@ -73,7 +82,7 @@
 
     <!-- Food Selection Section -->
 
-    <div class="container">
+    <div class="container" id="choices">
 
         <div class="dishes">
 
@@ -89,127 +98,6 @@
 
             <div class="food-menu" id="#food">
 
-                    <div class="food-content mix Snacks">
-                        <img src='Images/product-01.webp' alt="">
-                            <div class="details">
-                                <p id="food_name"> Green Pizza </p>
-                                <div class="stars-line">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p id="prices"> Price : $12.35 </p>
-                            </div>
-                    </div>
-
-                    <div class="food-content mix Snacks">
-                        <img src='Images/product-02.webp' alt="">
-                            <div class="details">
-                                <p id="food_name"> Slice Pizza </p>
-                                <div class="stars-line">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p id="prices"> Price : $10.55 </p>
-                            </div>
-                    </div>
-
-                    <div class="food-content mix Lunch">
-                        <img src='Images/product-03.webp' alt="">
-                            <div class="details">
-                                <p id="food_name"> Spaghetti </p>
-                                <div class="stars-line">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p id="prices"> Price : $5.99 </p>
-                            </div>
-                    </div>
-
-                    <div class="food-content mix Lunch">
-                        <img src='Images/product-04.webp' alt="">
-                            <div class="details">
-                                <p id="food_name"> Fried Chicken </p>
-                                <div class="stars-line">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p id="prices"> Price : $7.50 </p>
-                            </div>
-                    </div>
-
-                    <div class="food-content mix Dinner Breakfast">
-                        <img src='Images/product-05.webp' alt="">
-                            <div class="details">
-                                <p id="food_name"> Fresh Vegetables </p>
-                                <div class="stars-line">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p id="prices"> Price : $8.25 </p>
-                            </div>
-                    </div>
-
-                    <div class="food-content mix Dinner Breakfast">
-                        <img src='Images/product-06.webp' alt="">
-                            <div class="details">
-                                <p id="food_name"> Vegetables </p>
-                                <div class="stars-line">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p id="prices"> Price : $8.25 </p>
-                            </div>
-                    </div>
-
-                    <div class="food-content mix Snacks">
-                        <img src='Images/product-07.webp' alt="">
-                            <div class="details">
-                                <p id="food_name"> Jumbo Hotdog </p>
-                                <div class="stars-line">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p id="prices"> Price : $6.15 </p>
-                            </div>
-                    </div>
-
-                    <div class="food-content mix Dinner">
-                        <img src='Images/product-08.webp' alt="">
-                            <div class="details">
-                                <p id="food_name"> Pancit Bihon </p>
-                                <div class="stars-line">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <p id="prices"> Price : $3.49 </p>
-                            </div>
-                    </div>
-
-
             </div>
 
         </div>
@@ -220,7 +108,7 @@
 
     <div class="container">
 
-        <div class="dish_root">
+        <div class="dish_root" id="blog">
 
             <h2 id="dish"> Top Dishes  </h2>
             <div class="top_dishes">
@@ -314,11 +202,11 @@
 
     </div>
 
-    <!-- Fotoer -->
+    <!-- Footer -->
 
     <div class="container">
 
-        <footer>
+        <footer id="footer">
 
             <div class="links">
                 <h4> LOGO<span>.SHOP </span></h4>
@@ -354,44 +242,15 @@
 
     </div>
     
-    <script type="module" src="main.js">  </script>
+    <script type="module" src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
     
     <script>
-        var mixer = mixitup('.food-menu');
+        
 
         
-        var swiper = new Swiper('.swiper', {
-
-            slidesPerView: 4,
-            spaceBetween: 150,
-            autoplay: {
-                delay: 1200
-            },
-            speed: 6000,
-            loop: true,
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 40
-                },
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 70,
-                },
-                1100: {
-                    slidesPerView: 2,
-                    spaceBetween: 120
-                },
-                1300: {
-                    slidesPerView: 4,
-                    spaceBetween: 170
-                }
-            }
-
-        });
-
+    
     </script>
 
 </body>
