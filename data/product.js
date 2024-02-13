@@ -2,7 +2,7 @@ export const product = [
     {
         image: 'Images/product-01.webp',
         productName: 'Green Pizza',
-        price: 999,
+        price: 50000,
         id: '01',
         category: 'Snacks'
     }, {
@@ -26,7 +26,7 @@ export const product = [
     }, {
         image: 'Images/product-03.webp',
         productName: 'Healthy Pasta',
-        price: 439,
+        price: 18000,
         id: '05',
         category: 'Dinner'
     }, {
