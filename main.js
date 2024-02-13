@@ -1,14 +1,13 @@
 import { feature } from "./scripts/feature.js";
 import { category } from "./scripts/menu.js";
 import { click } from "./scripts/script.js";
-import { dishChoices } from "./scripts/dishes.js";
+import { productDesign } from "./scripts/dishes.js";
 
 
+productDesign();
 feature();
 category();
 click();
-dishChoices();
-
 
 var mixer = mixitup('.food-menu');
 

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
@@ -22,77 +21,10 @@ body {
     padding: 0 5%;
 }
 
-.container nav {
-    transform: translateX(.3rem);
-}
-
 .product {
     display: flex;
     gap: 100px;
     margin: 8% 0 0 10%;
-}
-
-
-/* Nav */
-
-nav {
-    position: fixed;
-    top: 4%;
-    width: 90%;
-    height: 60px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-
-    background: #fff;
-    box-shadow: 5px 10px 20px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    opacity: 0;
-}
-
-nav h3 {
-    font-size: 20px;
-    letter-spacing: .3px;
-}
-
-nav h3 a {
-    color: black;
-}
-
-nav h3 span {
-    color: #ff8911;
-}
-
-.nav-button {
-    display: flex;
-    gap: 20px;
-}
-
-.cart-bag {
-    position: relative;
-    background: #000;
-    color: #fff;
-    padding: 8px 30px;
-    border-radius: 5px;
-    display: flex;
-    gap: 7px;
-    align-items: center;
-    transition: .4s ease
-}
-
-.cart-bag:hover {
-    background: rgb(40, 54, 24);
-    color: #fff;
-}
-
-.cart-bag i {
-    font-size: 15px;
-}
-
-nav #menu {
-    display: none;
 }
 
 /* Left */
@@ -146,7 +78,7 @@ nav #menu {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    gap: 40px;
+    gap: 20px;
     padding-left: 10px;
 }
 
