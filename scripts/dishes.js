@@ -21,7 +21,7 @@ export function productDesign(){
                         </div>
                         <p id="prices"> Price : $${(item.price /100).toFixed(2)} </p>
                         <button class="add-btn"
-                        data-product-id="${item.id}"> Add to Bag </button>
+                        data-product="${item.id}"> Add to Bag </button>
                     </div>
             </div>
         `;
@@ -34,26 +34,27 @@ export function productDesign(){
     addBtn.forEach(item => {
 
         item.addEventListener('click', () => {
-            const dataBtn = item.dataset;
+            const dataBtn = item.dataset.product;
 
                 addToCart(dataBtn);
                 cartQuantity();
+                productDesign();
 
 
         });
         
     });
 
-}
+    function cartQuantity() {
 
-function cartQuantity() {
-
-    let quantity = 0;
-
-    cart.forEach(item => {
-        quantity += item.quantity;
-    });
-
-    document.querySelector('.cart-quantity').innerHTML = quantity;
+        let quantity = 0;
+    
+        cart.forEach(item => {
+            quantity += item.quantity;
+        });
+    
+        document.querySelector('.cart-quantity').innerHTML = quantity;
+    
+    }
 
 }

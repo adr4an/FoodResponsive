@@ -1,10 +1,11 @@
-export let cart = [{
-    id: '01',
-    quantity: 1
-}, {
-    id: '05',
-    quantity: 1
-}];
+export let cart = JSON.parse(localStorage.getItem('Item'));
+
+    if (!cart) {
+        cart = [{
+            id: '07',
+            quantity: 1
+        }];
+    }
 
 export function addToCart(dataBtn) {
 
@@ -24,7 +25,7 @@ export function addToCart(dataBtn) {
         })
     }
 
-    console.log(cart);
+    saveToStorage();
 
 }
 
@@ -39,7 +40,12 @@ export function removeCart(btnID){
     });
 
     cart = newCart;
+    saveToStorage();
 
-    console.log(cart);
+}
+
+export function saveToStorage() {
+
+    localStorage.setItem('Item', JSON.stringify(cart));
 
 }

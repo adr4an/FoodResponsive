@@ -4,10 +4,10 @@ import { click } from "./scripts/script.js";
 import { productDesign } from "./scripts/dishes.js";
 
 
-productDesign();
 feature();
 category();
 click();
+productDesign();
 
 var mixer = mixitup('.food-menu');
 

@@ -25,7 +25,7 @@ function checkOut () {
                         <div class="icon">
                             <i class="fa-regular fa-heart"></i>
                             <i class='bx bx-trash js-delete-btn' 
-                            data-remove-id="${matchingItem.id}"></i>
+                            data-remove="${matchingItem.id}"></i>
                         </div>
                     </div>
                 </div>
@@ -41,12 +41,13 @@ function checkOut () {
 
         dlt.forEach(item => {
             item.addEventListener('click', () => {
-                const btnId = item.dataset.removeId;
+                const btnId = item.dataset.remove;
 
                 removeCart(btnId);
                 console.log(cart);
 
-                // const root = document.querySelector(`.js-cart-${btnId}`);
+                const root = document.querySelector(`.js-cart-${btnId}`);
+                root.remove();
 
             });
 
