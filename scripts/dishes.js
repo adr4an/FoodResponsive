@@ -19,7 +19,7 @@ export function productDesign(){
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                         </div>
-                        <p id="prices"> Price : $${(item.price /100).toFixed(2)} </p>
+                        <p id="prices"> Price : ₱${(item.price /100).toFixed(2)} </p>
                         <button class="add-btn"
                         data-product="${item.id}"> Add to Bag </button>
                     </div>
@@ -37,7 +37,6 @@ export function productDesign(){
             const dataBtn = item.dataset.product;
 
                 addToCart(dataBtn);
-                cartQuantity();
                 productDesign();
 
 
@@ -45,7 +44,6 @@ export function productDesign(){
         
     });
 
-    function cartQuantity() {
 
         let quantity = 0;
     
@@ -54,7 +52,9 @@ export function productDesign(){
         });
     
         document.querySelector('.cart-quantity').innerHTML = quantity;
+        
     
-    }
 
 }
+
+productDesign();

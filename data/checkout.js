@@ -1,5 +1,6 @@
 import { cart, removeCart } from "./cart.js";
 import { product } from "./product.js";
+import { paymentSummary } from "./payment.js";
 
 function checkOut () {
 
@@ -8,12 +9,7 @@ function checkOut () {
     cart.forEach(item => {
         const cartId = item.id;
 
-        let matchingItem;
-        product.forEach(productItem => {
-            if (productItem.id === cartId) {
-                matchingItem = productItem;
-            }
-        });
+        let matchingItem = matchingId(cartId);
 
         cartHTML += `
             <div class="left-item js-cart-${matchingItem.id}">
@@ -22,6 +18,7 @@ function checkOut () {
                     <div class="content">
                         <h5> ${matchingItem.productName} </h5>
                         <p> ₱${(matchingItem.price /100).toFixed(2)} </p>
+                        <p class="item-quantity"> Quantity: ${item.quantity} </p>
                         <div class="icon">
                             <i class="fa-regular fa-heart"></i>
                             <i class='bx bx-trash js-delete-btn' 
@@ -36,7 +33,7 @@ function checkOut () {
 
     document.querySelector('.left').innerHTML = cartHTML;
 
-
+    // Delete Button
     const dlt = document.querySelectorAll('.js-delete-btn');
 
         dlt.forEach(item => {
@@ -44,16 +41,31 @@ function checkOut () {
                 const btnId = item.dataset.remove;
 
                 removeCart(btnId);
-                console.log(cart);
 
                 const root = document.querySelector(`.js-cart-${btnId}`);
                 root.remove();
+                paymentSummary();
+
 
             });
 
         });
+
+    // Calculating Price
+    paymentSummary();
     
 }
 
 checkOut();
 
+export function matchingId(productID) {
+    let matchingItem;
+
+    product.forEach(productItem => {
+        if (productItem.id === productID) {
+            matchingItem = productItem;
+        }
+    });
+
+    return matchingItem;
+}
